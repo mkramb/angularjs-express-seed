@@ -1,0 +1,20 @@
+{% extends "site_layout.html" %}
+
+{% block body %}
+  <div class="container" data-ng-controller="HomeCtrl">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Population</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-ng-repeat="country in countries">
+          <td>{{country.name}}</td>
+          <td>{{country.population}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

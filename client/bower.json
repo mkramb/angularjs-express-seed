@@ -1,0 +1,11 @@
+{
+  "name": "zone-lookup",
+  "ignore": [
+    "**/.*",
+    "lib"
+  ],
+  "dependencies": {
+    "angular": "~1.2.1",
+    "bootstrap": "~3.2.0"
+  }
+}
