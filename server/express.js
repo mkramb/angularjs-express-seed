@@ -1,7 +1,7 @@
 module.exports = function(app) {
 
-  var i18n = require('i18n-2');
   var express = require('express');
+  var i18n = require('i18n-2');
   var swig = require('swig');
 
   var port = process.env.PORT || 3000;
@@ -24,11 +24,9 @@ module.exports = function(app) {
       next();
     });
 
-    swig.setDefaults({ varControls: ['<<', '>>'] })
     app.engine('html', swig.renderFile);
-
     app.set('view engine', 'html');
-    app.set('views', __dirname + '/../client/views');
+    app.set('views', __dirname + '/views');
     app.set('port', port);
 
     app.use(express.static(__dirname + '/../public'));

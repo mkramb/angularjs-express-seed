@@ -1,9 +1,10 @@
 'use strict';
 
 function HomeCtrl ($scope) {
+  $scope.title = "Countries";
   $scope.countries = [
-      {name: 'France', population: 63.1},
-      {name: 'United Kingdom', population: 61.8}
+    { name: 'France', population: 63.1 },
+    { name: 'United Kingdom', population: 61.8 }
   ];
 }
 

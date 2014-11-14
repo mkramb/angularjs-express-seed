@@ -4,6 +4,7 @@
 
 ```sh
 npm install
+cd client && bower install
 ```
 
 ### Development

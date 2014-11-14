@@ -5,7 +5,7 @@ module.exports = {
       '<%= paths.root %>/client/library/bootstrap/dist/js/bootstrap.js',
       '<%= paths.root %>/client/library/angular/angular.js'
     ],
-    dest: '<%= paths.root %>/public/js/lib.js'
+    dest: '<%= paths.root %>/public/scripts/lib.js'
   },
   css: {
     src: [

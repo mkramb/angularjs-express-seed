@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
   'use strict';
 
-  var config = require('./config')(grunt);
+  var config = require('./grunt')(grunt);
 
   config.pkg = grunt.file.readJSON('./package.json');
   config.paths = { root: __dirname };
@@ -15,9 +15,13 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('default', [ 'availabletasks' ]);
-  grunt.registerTask('dev-server', [ 'nodemon' ]);
 
-  grunt.registerTask('dev-compile', [
+  grunt.registerTask('run-tests', [ 'protractor:run' ]);
+  grunt.registerTask('run-tests-debug', [ 'protractor:debug' ]);
+  grunt.registerTask('run-webdriver', [ 'shell:webdriver' ]);
+  grunt.registerTask('run-server', [ 'nodemon' ]);
+
+  grunt.registerTask('compile', [
     'clean',
     'copy',
     'concat:js',
@@ -26,7 +30,7 @@ module.exports = function(grunt) {
     'less:client'
   ]);
 
-  grunt.registerTask('prod-compile', [
+  grunt.registerTask('build', [
     'clean',
     'copy',
     'concat:js',
